@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <BackgroundShapes />
         <Navigation />
-        <main className="min-h-screen p-4 relative">
+        <main className="min-h-screen relative pt-0">
           {children}
         </main>
         <Footer />

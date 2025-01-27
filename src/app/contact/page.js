@@ -103,16 +103,16 @@ export default function Contact() {
           willChange: 'transform',
           transform: 'translateZ(0)'
         }}
-        className="text-6xl md:text-7xl font-bold mb-16 text-center text-[#002033] font-playfair leading-tight"
+        className="text-6xl md:text-7xl font-bold mb-16 text-center text-white font-playfair leading-tight"
       >
         Contact Us
       </motion.h1>
       
-      <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+      <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
         {/* Contact Information */}
-        <div className="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div className="bg-white/10 backdrop-blur-sm p-10 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-white/10 hover:bg-white/20">
           <AnimateOnScroll>
-            <h2 className="text-3xl md:text-4xl font-semibold mb-10 text-[#002033] font-playfair">Get in Touch</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold mb-10 text-white font-playfair">Get in Touch</h2>
             
             <div className="space-y-8">
               {[
@@ -140,8 +140,8 @@ export default function Contact() {
                   style={{ willChange: 'transform' }}
                   className="space-y-2"
                 >
-                  <h3 className="text-xl font-medium text-[#002033]">{item.title}</h3>
-                  <p className="text-lg text-[#002033] hover:text-opacity-80 whitespace-pre-line leading-relaxed">
+                  <h3 className="text-xl font-medium text-white">{item.title}</h3>
+                  <p className="text-lg text-gray-300 whitespace-pre-line leading-relaxed">
                     {item.content}
                   </p>
                 </motion.div>
@@ -154,13 +154,13 @@ export default function Contact() {
                 transition={{ duration: 0.3, delay: 0.5 }}
                 style={{ willChange: 'transform' }}
               >
-                <h3 className="text-xl font-medium text-[#002033] mb-4">Follow Us</h3>
+                <h3 className="text-xl font-medium text-white mb-4">Follow Us</h3>
                 <div className="flex space-x-6">
                   {['LinkedIn', 'Instagram', 'Twitter'].map((platform, index) => (
                     <motion.a
                       key={platform}
                       href="#"
-                      className="text-lg text-[#002033] hover:text-opacity-80"
+                      className="text-lg text-gray-300 hover:text-white transition-colors duration-300"
                       whileHover={{ transform: 'scale(1.1)' }}
                       whileTap={{ transform: 'scale(0.95)' }}
                       initial={{ opacity: 0 }}
@@ -178,13 +178,13 @@ export default function Contact() {
         </div>
 
         {/* Contact Form */}
-        <div className="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div className="bg-white/10 backdrop-blur-sm p-10 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-white/10 hover:bg-white/20">
           <AnimateOnScroll delay={0.3}>
-            <h2 className="text-3xl md:text-4xl font-semibold mb-10 text-[#002033] font-playfair">Send us a Message</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold mb-10 text-white font-playfair">Send us a Message</h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-lg font-medium text-[#002033] mb-3" htmlFor="name">
+                <label className="block text-lg font-medium text-white mb-3" htmlFor="name">
                   Name
                 </label>
                 <input
@@ -192,19 +192,19 @@ export default function Contact() {
                   id="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className={`w-full px-3 py-2.5 text-lg border rounded-md focus:outline-none focus:ring-2 focus:ring-[#002033] ${
-                    errors.name ? 'border-red-500' : 'border-gray-300'
+                  className={`w-full px-3 py-2.5 text-lg border bg-white/5 backdrop-blur-sm rounded-md focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-gray-400 ${
+                    errors.name ? 'border-red-500' : 'border-white/10'
                   }`}
                   placeholder="Your Name"
                   required
                 />
                 {errors.name && (
-                  <p className="text-red-500 text-base mt-2">{errors.name}</p>
+                  <p className="text-red-400 text-base mt-2">{errors.name}</p>
                 )}
               </div>
               
               <div>
-                <label className="block text-lg font-medium text-[#002033] mb-3" htmlFor="email">
+                <label className="block text-lg font-medium text-white mb-3" htmlFor="email">
                   Email
                 </label>
                 <input
@@ -212,19 +212,19 @@ export default function Contact() {
                   id="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-3 py-2.5 text-lg border rounded-md focus:outline-none focus:ring-2 focus:ring-[#002033] ${
-                    errors.email ? 'border-red-500' : 'border-gray-300'
+                  className={`w-full px-3 py-2.5 text-lg border bg-white/5 backdrop-blur-sm rounded-md focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-gray-400 ${
+                    errors.email ? 'border-red-500' : 'border-white/10'
                   }`}
                   placeholder="your@northeastern.edu"
                   required
                 />
                 {errors.email && (
-                  <p className="text-red-500 text-base mt-2">{errors.email}</p>
+                  <p className="text-red-400 text-base mt-2">{errors.email}</p>
                 )}
               </div>
               
               <div>
-                <label className="block text-lg font-medium text-[#002033] mb-3" htmlFor="message">
+                <label className="block text-lg font-medium text-white mb-3" htmlFor="message">
                   Message
                 </label>
                 <textarea
@@ -232,25 +232,25 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   rows="5"
-                  className={`w-full px-3 py-2.5 text-lg border rounded-md focus:outline-none focus:ring-2 focus:ring-[#002033] ${
-                    errors.message ? 'border-red-500' : 'border-gray-300'
+                  className={`w-full px-3 py-2.5 text-lg border bg-white/5 backdrop-blur-sm rounded-md focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-gray-400 ${
+                    errors.message ? 'border-red-500' : 'border-white/10'
                   }`}
                   placeholder="Your message here..."
                   required
                 ></textarea>
                 {errors.message && (
-                  <p className="text-red-500 text-base mt-2">{errors.message}</p>
+                  <p className="text-red-400 text-base mt-2">{errors.message}</p>
                 )}
-                <p className="text-gray-500 text-base mt-2">
+                <p className="text-gray-400 text-base mt-2">
                   {formData.message.length}/500 characters
                 </p>
               </div>
 
               {status.message && (
-                <div className={`p-4 rounded-md text-lg ${
-                  status.type === 'error' ? 'bg-red-100 text-red-700' :
-                  status.type === 'success' ? 'bg-green-100 text-green-700' :
-                  'bg-blue-100 text-blue-700'
+                <div className={`p-4 rounded-md text-lg backdrop-blur-sm ${
+                  status.type === 'error' ? 'bg-red-500/10 text-red-400 border border-red-500/20' :
+                  status.type === 'success' ? 'bg-green-500/10 text-green-400 border border-green-500/20' :
+                  'bg-blue-500/10 text-blue-400 border border-blue-500/20'
                 }`}>
                   {status.message}
                 </div>
@@ -259,7 +259,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status.type === 'loading'}
-                className="w-full bg-[#002033] text-white py-4 px-8 rounded-md hover:bg-opacity-90 transition duration-300 disabled:opacity-50 text-lg font-medium mt-6"
+                className="w-full bg-white text-nuib-navy py-4 px-8 rounded-md hover:bg-opacity-90 transition duration-300 disabled:opacity-50 text-lg font-medium mt-6"
               >
                 {status.type === 'loading' ? 'Sending...' : 'Send Message'}
               </button>

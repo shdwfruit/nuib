@@ -3,14 +3,8 @@
 @tailwind utilities;
 
 body {
-  background: linear-gradient(to bottom right, #f8fafc, #f1f5f9);
-  background-image: 
-    radial-gradient(#002033 0.5px, transparent 0.5px),
-    radial-gradient(#002033 0.5px, #f8fafc 0.5px);
-  background-size: 20px 20px;
-  background-position: 0 0, 10px 10px;
+  background: linear-gradient(135deg, #0A1628 0%, #152238 50%, #1a2942 100%);
   background-attachment: fixed;
-  opacity: 0.97;
 }
 
 .bg-grid-pattern {

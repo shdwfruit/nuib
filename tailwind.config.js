@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'nuib-navy': '#002033',
+        'nuib-navy': '#0A1628',
+        'nuib-white': '#FFFFFF',
       },
       fontFamily: {
         playfair: ['var(--font-playfair)'],

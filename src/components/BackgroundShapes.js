@@ -5,7 +5,7 @@ export function BackgroundShapes() {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
       <motion.div
-        className="absolute w-96 h-96 bg-[#002033] rounded-full opacity-[0.03]"
+        className="absolute w-96 h-96 bg-white rounded-full opacity-[0.02]"
         animate={{
           x: ['-25%', '5%'],
           y: ['-25%', '5%'],
