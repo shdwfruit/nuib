@@ -123,7 +123,7 @@ export default function Contact() {
                 },
                 {
                   title: 'Office Location',
-                  content: 'Hayden Hall, Room XXX\nNortheastern University\nBoston, MA 02115',
+                  content: 'International Village, Room 019\nNortheastern University\nBoston, MA 02115',
                   delay: 0.3
                 },
                 {
@@ -155,17 +155,17 @@ export default function Contact() {
                 style={{ willChange: 'transform' }}
               >
                 <h3 className="text-xl font-medium text-white mb-4">Follow Us</h3>
-                <div className="flex space-x-6">
+                <div className="flex space-x-6 relative z-10">
                   {['LinkedIn', 'Instagram', 'Twitter'].map((platform, index) => (
                     <motion.a
                       key={platform}
                       href="#"
-                      className="text-lg text-gray-300 hover:text-white transition-colors duration-300"
-                      whileHover={{ transform: 'scale(1.1)' }}
-                      whileTap={{ transform: 'scale(0.95)' }}
+                      className="text-lg text-gray-300 hover:text-white transition-colors duration-300 relative"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      transition={{ delay: 0.6 + (index * 0.1) }}
+                      transition={{ delay: 0.15 }}
                       style={{ willChange: 'transform' }}
                     >
                       {platform}
