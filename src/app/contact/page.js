@@ -34,10 +34,6 @@ export default function Contact() {
       newErrors.email = 'Please use your Northeastern email address'
     }
 
-    // Message validation
-    if (formData.message.trim().length < 10) {
-      newErrors.message = 'Message must be at least 10 characters'
-    }
     if (formData.message.length > 500) {
       newErrors.message = 'Message must be less than 500 characters'
     }
