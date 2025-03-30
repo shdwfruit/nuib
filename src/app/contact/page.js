@@ -114,7 +114,7 @@ export default function Contact() {
               {[
                 {
                   title: 'Email',
-                  content: 'nuib@northeastern.edu',
+                  content: 'To be announced',
                   delay: 0.2
                 },
                 {
