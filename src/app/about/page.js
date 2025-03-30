@@ -41,6 +41,12 @@ const leadershipTeam = [
     linkedin: 'https://www.linkedin.com/in/arnav-mehta-7503b4282/'
   },
   {
+    role: 'Vice President of Marketing',
+    name: 'Kristen Liao',
+    image: '/liao.jpg',
+    linkedin: 'https://www.linkedin.com/in/kristen-liao/'
+  },
+  {
     role: 'Vice President of Technology',
     name: 'Rick Xie',
     image: '/rick.png',
